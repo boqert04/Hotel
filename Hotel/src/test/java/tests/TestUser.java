@@ -34,4 +34,17 @@ public class TestUser {
 
 
 	}
+	
+	@Test(expected=org.hibernate.exception.ConstraintViolationException.class)
+	public void insert_duplicate() {
+		user.setUsername("raul");
+		user.setPassword("spring");
+		userService.persist(user);
+	}
+	
+	@Test
+	public void update_user() {
+		user.setPassword("low");
+		userService.update(user);
+	}
 }
