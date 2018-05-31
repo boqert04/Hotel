@@ -1,11 +1,10 @@
 package DAO;
 
-import local.User;
-
 import java.util.List;
 
 import DAO.UserDao;
-public class UserService {
+import entitys.User;
+public class UserService implements UserServiceInterface{
 
 	private static UserDao userDao;
 	

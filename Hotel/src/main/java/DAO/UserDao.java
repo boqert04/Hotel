@@ -7,7 +7,7 @@ import org.hibernate.*;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import local.User;
+import entitys.User;
 
 public class UserDao implements UserDaoInterface<User, String> {
 
