@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="com.mkyong.controller" />
+	<context:component-scan base-package="controllers" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -15,8 +15,17 @@
 			<value>/WEB-INF/pages/</value>
 		</property>
 		<property name="suffix">
-			<value>.jsp</value>
+			<value>index.jsp</value>
 		</property>
 	</bean>
-
+   <bean id = "UserServices" class = "DAO.UserSerivice.java">
+   <!--     <property name = "message1" value = "Hello World!"/>-->
+    
+   </bean>
+   
+   <bean id = "BaseController" class= "controllers.BaseController.java">
+   </bean>
+   
+   <bean id = "User" class = "entitys.User.java">
+   </bean>
 </beans>
